@@ -6,7 +6,6 @@ import study.springcloud.provider.service.DemoService;
 @RestController
 public class DemoServiceImpl implements DemoService {
 
-//    @Transactional
     @Override
     public String hello(String name) {
             return null;
