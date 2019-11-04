@@ -1,4 +1,4 @@
-package study.springcloud.provider.service.support;
+package study.springcloud.provider.support;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

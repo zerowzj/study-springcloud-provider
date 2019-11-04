@@ -1,6 +1,6 @@
-package study.springcloud.provider.service;
+package study.springcloud.provider;
 
-import study.springcloud.provider.service.support.SpringBootCfg;
+import study.springcloud.provider.support.SpringBootCfg;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
