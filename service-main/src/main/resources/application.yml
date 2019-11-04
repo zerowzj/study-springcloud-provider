@@ -11,3 +11,8 @@ spring:
   main:
     web-application-type: servlet
 
+#注册中心配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://114.67.102.8:7100/eureka/
