@@ -1,4 +1,4 @@
-package com.company.project.support.exception;
+package study.springcloud.provider.service.support.exception;
 
 import com.google.common.collect.Maps;
 import org.springframework.web.bind.annotation.ExceptionHandler;

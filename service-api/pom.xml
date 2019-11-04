@@ -5,7 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>study.springcloud</groupId>
     <artifactId>service-api</artifactId>
-    <version>1.0.0</version>
+    <version>1.0</version>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
+            <version>1.4.7.RELEASE</version>
+        </dependency>
+    </dependencies>
 </project>

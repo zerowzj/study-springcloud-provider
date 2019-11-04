@@ -1,6 +1,6 @@
-package com.company.project;
+package study.springcloud.provider.service;
 
-import com.company.project.support.SpringBootCfg;
+import study.springcloud.provider.service.support.SpringBootCfg;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
