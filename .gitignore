@@ -23,8 +23,5 @@
 hs_err_pid*
 
 service-api/target/
-.idea/
-
-
-
 service-main/target/
+.idea/
