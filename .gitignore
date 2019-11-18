@@ -23,5 +23,7 @@
 hs_err_pid*
 
 /service-api/target
+/service-api/*.iml
 /service-main/target
+/service-main/*.iml
 /.idea
