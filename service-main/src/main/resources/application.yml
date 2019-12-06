@@ -11,9 +11,9 @@ spring:
   main:
     web-application-type: servlet
 
-####################
-#（★）Eureka
-####################
+#########################
+#（★）Eureka Client
+#########################
 eureka:
   #（1）实例配置
   instance:
