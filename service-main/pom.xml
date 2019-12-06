@@ -17,7 +17,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.3.RELEASE</version>
+        <version>2.1.0.RELEASE</version>
     </parent>
     <dependencyManagement>
         <dependencies>
@@ -42,6 +42,9 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!-- ==================== -->
+        <!--（★）Eureka客户端     -->
+        <!-- ==================== -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
@@ -78,16 +81,12 @@
 
     <build>
         <finalName>study-springcloud-provider</finalName>
-        <filters>
-            <filter>src/main/filters/${env}.properties</filter>
-        </filters>
         <resources>
             <resource>
                 <directory>src/main/profiles/${env}</directory>
             </resource>
             <resource>
                 <directory>src/main/resources</directory>
-                <filtering>true</filtering>
             </resource>
         </resources>
         <plugins>
