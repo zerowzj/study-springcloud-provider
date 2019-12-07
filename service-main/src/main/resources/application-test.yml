@@ -6,6 +6,7 @@ logging:
   config: classpath:logback.xml
 #
 spring:
+  profiles: test
   application:
     name: study-springcloud-provider
   main:
