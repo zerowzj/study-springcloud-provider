@@ -20,5 +20,5 @@ eureka:
   client:
     service-url:
       defaultZone: http://114.67.102.8:7010/eureka/
-    # CahceRefresh线程的调度频率
+    # CacheRefresh线程的调度频率
     registry-fetch-interval-seconds: 30
