@@ -15,10 +15,10 @@ spring:
 eureka:
   instance:
     instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
-    # Eureka Client向Eureka Server发送心跳时间间隔
+    #Eureka Client向Eureka Server发送心跳时间间隔
     lease-renewal-interval-in-seconds: 30
   client:
     service-url:
-      defaultZone: http://114.67.102.8:7010/eureka/
+      defaultZone: http://114.67.102.8:7101/eureka/
     # CacheRefresh线程的调度频率
     registry-fetch-interval-seconds: 30
