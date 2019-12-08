@@ -39,7 +39,7 @@
         </rollingPolicy>
     </appender>
 
-    <root level="INFO">
+    <root level="DEBUG">
         <appender-ref ref="STDOUT"/>
         <appender-ref ref="FILE_DEBUG"/>
         <appender-ref ref="FILE_ERROR"/>

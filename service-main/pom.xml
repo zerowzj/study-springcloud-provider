@@ -78,12 +78,16 @@
 
     <build>
         <finalName>study-springcloud-provider</finalName>
+        <filters>
+            <filter>src/main/filter/${env}.properties</filter>
+        </filters>
         <resources>
             <resource>
                 <directory>src/main/profiles/${env}</directory>
             </resource>
             <resource>
                 <directory>src/main/resources</directory>
+                <filtering>true</filtering>
             </resource>
         </resources>
         <plugins>
@@ -91,7 +95,6 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-
             <plugin>
                 <groupId>com.spotify</groupId>
                 <artifactId>dockerfile-maven-plugin</artifactId>
