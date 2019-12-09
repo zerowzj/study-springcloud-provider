@@ -1,6 +1,6 @@
 #
 server:
-  port: 7090
+  port: 7200
 #
 logging:
   config: classpath:logback.xml
@@ -10,8 +10,9 @@ spring:
     name: study-springcloud-provider
   main:
     web-application-type: servlet
-
-# 注册中心配置
+#########################
+#（★）Eureka Client
+#########################
 eureka:
   #（1）实例配置
   instance:
@@ -23,4 +24,4 @@ eureka:
     #CacheRefresh线程的调度频率
     registry-fetch-interval-seconds: 30
     service-url:
-      defaultZone: http://114.67.102.8:7101/eureka/
+      defaultZone: @eureka.client.defaultZone@

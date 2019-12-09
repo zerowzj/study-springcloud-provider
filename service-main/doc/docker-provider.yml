@@ -4,9 +4,9 @@ services:
     image: study/study-springcloud-provider:1
     restart: always
     ports:
-      - 7101:7200
+      - 7201:7200
     environment:
-      - EUREKA_SERVER_LIST=http://eureka-server2:7102/eureka/,http://eureka-server3:7103/eureka/
+      - EUREKA_SERVER_LIST=http://eureka-server1:7101/eureka/,http://eureka-server1:7101/eureka/,http://eureka-server3:7103/eureka/
     volumes:
       - /xdfapp:/xdfapp
     networks:
@@ -15,9 +15,9 @@ services:
     image: study/study-springcloud-eureka:1
     restart: always
     ports:
-      - 7102:7100
+      - 7202:7200
     environment:
-      - EUREKA_SERVER_LIST=http://eureka-server1:7101/eureka/,http://eureka-server3:7103/eureka/
+      - EUREKA_SERVER_LIST=http://eureka-server1:7101/eureka/,http://eureka-server2:7102/eureka/,http://eureka-server3:7103/eureka/
     volumes:
       - /xdfapp:/xdfapp
     networks:
