@@ -18,7 +18,7 @@ eureka:
   instance:
     instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
     #Eureka Client向Eureka Server发送心跳时间间隔
-    lease-renewal-interval-in-seconds: 30
+    lease-renewal-interval-in-seconds: 300000
   #（2）客户端配置
   client:
     #CacheRefresh线程的调度频率
