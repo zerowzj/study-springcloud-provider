@@ -95,7 +95,6 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-
             <plugin>
                 <groupId>com.spotify</groupId>
                 <artifactId>dockerfile-maven-plugin</artifactId>
@@ -103,19 +102,15 @@
                 <executions>
                     <execution>
                         <id>default</id>
-                        <!--如果package时不想用docker打包,就注释掉这个goal-->
                         <goals>
                             <goal>build</goal>
-                            <!--                            <goal>tag</goal>-->
                             <goal>push</goal>
                         </goals>
                     </execution>
                 </executions>
                 <configuration>
                     <googleContainerRegistryEnabled>false</googleContainerRegistryEnabled>
-                    <!--镜像仓库-->
-                    <repository>${docker.image.prefix}/${project.artifactId}</repository>
-                    <!--镜像TAG，不指定默认为latest-->
+                    <repository>${docker.image.prefix}/${project.build.finalName}</repository>
                     <tag>1</tag>
                     <buildArgs>
                         <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
