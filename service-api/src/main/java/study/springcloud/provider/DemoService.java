@@ -9,4 +9,7 @@ public interface DemoService {
 
     @PostMapping("/hellol")
     String hello(@RequestParam("name") String name);
+
+    @PostMapping("/getServerInfo")
+    String getServerInfo();
 }
