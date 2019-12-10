@@ -42,7 +42,6 @@ eureka:
     eureka-server-connect-timeout-seconds: 5
     #读取Server超时时间，默认8秒
     eureka-server-read-timeout-seconds: 8
-
     service-url:
       defaultZone: @eureka.client.defaultZone@
 
