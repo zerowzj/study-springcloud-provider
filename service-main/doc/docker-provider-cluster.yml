@@ -4,8 +4,9 @@ services:
     image: study/study-springcloud-provider:1
     restart: always
     ports:
-      - 7201:7200
+      - 7201:7201
     environment:
+      - SERVER_PORT=7201
       - EUREKA_SERVER_LIST=http://114.67.102.8:7101/eureka
     volumes:
       - /xdfapp:/xdfapp
@@ -15,8 +16,9 @@ services:
     image: study/study-springcloud-provider:1
     restart: always
     ports:
-      - 7202:7200
+      - 7202:7202
     environment:
+      - SERVER_PORT=7202
       - EUREKA_SERVER_LIST=http://114.67.102.8:7101/eureka
     volumes:
       - /xdfapp:/xdfapp
