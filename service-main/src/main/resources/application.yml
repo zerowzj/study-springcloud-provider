@@ -44,5 +44,3 @@ eureka:
     eureka-server-read-timeout-seconds: 8
     service-url:
       defaultZone: @eureka.client.defaultZone@
-
-
