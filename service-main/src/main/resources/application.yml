@@ -17,11 +17,10 @@ eureka:
   #（1）实例配置
   instance:
     hostname: study-springcloud-provider
-    instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
-    #Eureka Client向Eureka Server发送心跳时间间隔（默认30秒）
-    lease-renewal-interval-in-seconds: 30
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
     prefer-ip-address: true
-
+    #Eureka Client向Eureka Server发送心跳时间间隔，默认30
+    lease-renewal-interval-in-seconds: 30
   #（2）客户端配置
   client:
     register-with-eureka: true
