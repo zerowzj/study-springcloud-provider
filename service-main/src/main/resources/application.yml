@@ -45,3 +45,4 @@ eureka:
     #
     service-url:
       defaultZone: @eureka.client.defaultZone@
+
