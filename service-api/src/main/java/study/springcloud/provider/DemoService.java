@@ -10,9 +10,4 @@ public interface DemoService {
     @PostMapping("/sayHi")
     String sayHi(@RequestParam("name") String name);
 
-    @PostMapping("/getServerInfo")
-    String getServerInfo();
-
-    @PostMapping("/waitFor")
-    String waitFor(@RequestParam("seconds")  Long seconds);
 }

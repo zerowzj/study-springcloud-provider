@@ -4,11 +4,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
-import org.springframework.web.bind.annotation.RestController;
-import study.springcloud.provider.DemoService;
+import study.springcloud.provider.LoadBalanceService;
 
-@RestController
-public class DemoServiceImpl implements DemoService {
+public class LoadBalanceServiceImpl implements LoadBalanceService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(DemoServiceImpl.class);
 
@@ -16,8 +14,9 @@ public class DemoServiceImpl implements DemoService {
     private Environment environment;
 
     @Override
-    public String sayHi(String name) {
-        LOGGER.info("SFFFFFFFFFFFFFFF");
-        return "hello, " + name;
+    public String getServerInfo() {
+        LOGGER.info("i am getServerInfo");
+        String instanceId = environment.getProperty("eureka.instance.instance-id");
+        return "instance-id : " + instanceId;
     }
 }

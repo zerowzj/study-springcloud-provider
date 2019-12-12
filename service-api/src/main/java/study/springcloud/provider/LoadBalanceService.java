@@ -2,11 +2,10 @@ package study.springcloud.provider;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @FeignClient(name = "study-springcloud-provider")
-public interface TimeoutService {
+public interface LoadBalanceService {
 
-    @PostMapping("/await")
-    String await(@RequestParam("timeout") Long timeout);
+    @PostMapping("/getServerInfo")
+    String getServerInfo();
 }
