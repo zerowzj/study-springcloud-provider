@@ -14,6 +14,7 @@ public class TimeoutServiceImpl implements TimeoutService {
 
     @Override
     public String await(Long timeout) {
+        LOGGER.info("收到请求");
         long start = System.currentTimeMillis();
         try {
             TimeUnit.SECONDS.sleep(timeout);
