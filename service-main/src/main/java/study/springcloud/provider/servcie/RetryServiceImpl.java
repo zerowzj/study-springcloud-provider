@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServletResponse;
 @RestController
 public class RetryServiceImpl implements RetryService {
 
-
     @Override
     public void retry(int code, HttpServletResponse response) {
         try {
