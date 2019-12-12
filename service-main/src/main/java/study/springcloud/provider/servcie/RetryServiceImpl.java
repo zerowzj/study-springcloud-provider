@@ -10,18 +10,9 @@ public class RetryServiceImpl implements RetryService {
 
 
     @Override
-    public void retry404(HttpServletResponse response) {
+    public void retry(int code, HttpServletResponse response) {
         try {
-            response.sendError(404);
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-    }
-
-    @Override
-    public void retry500(HttpServletResponse response) {
-        try {
-            response.sendError(500);
+            response.sendError(code);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
