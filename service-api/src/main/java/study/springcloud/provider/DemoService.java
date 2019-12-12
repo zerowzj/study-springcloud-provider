@@ -7,9 +7,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient(name = "study-springcloud-provider")
 public interface DemoService {
 
-    @PostMapping("/hellol")
-    String hello(@RequestParam("name") String name);
+    @PostMapping("/sayHi")
+    String sayHi(@RequestParam("name") String name);
 
     @PostMapping("/getServerInfo")
     String getServerInfo();
+
+    @PostMapping("/waitFor")
+    String waitFor(@RequestParam("seconds")  Long seconds);
 }
