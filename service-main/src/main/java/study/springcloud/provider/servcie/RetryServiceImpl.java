@@ -8,10 +8,11 @@ import javax.servlet.http.HttpServletResponse;
 @RestController
 public class RetryServiceImpl implements RetryService {
 
+
     @Override
     public void retry404(HttpServletResponse response) {
         try {
-            response.sendError(400);
+            response.sendError(404);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
