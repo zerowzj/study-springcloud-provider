@@ -10,5 +10,5 @@ import javax.servlet.http.HttpServletResponse;
 public interface RetryService {
 
     @PostMapping("/retry")
-    void retry(@RequestParam int code, HttpServletResponse response);
+    void retry(@RequestParam int code);
 }
