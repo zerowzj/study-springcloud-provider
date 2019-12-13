@@ -17,6 +17,6 @@ public class LoadBalanceServiceImpl implements LoadBalanceService {
     public String getServerInfo() {
         LOGGER.info("i am getServerInfo");
         String instanceId = environment.getProperty("eureka.instance.instance-id");
-        return "instance-id : " + instanceId;
+        return "instance-id: " + instanceId;
     }
 }
