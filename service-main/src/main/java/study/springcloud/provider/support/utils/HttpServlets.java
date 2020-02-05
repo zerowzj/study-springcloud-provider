@@ -1,4 +1,4 @@
-package study.springcloud.provider.support.util;
+package study.springcloud.provider.support.utils;
 
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
