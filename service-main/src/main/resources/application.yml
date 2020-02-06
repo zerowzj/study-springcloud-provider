@@ -10,9 +10,9 @@ spring:
     name: study-springcloud-provider
   main:
     web-application-type: servlet
-#########################
+#==============================
 #（★）Eureka Client
-#########################
+#==============================
 eureka:
   #（▲）实例配置
   instance:
@@ -44,4 +44,4 @@ eureka:
     eureka-server-read-timeout-seconds: 8
     #
     service-url:
-      defaultZone: @eureka.client.defaultZone@
+      defaultZone: @eureka.server.list@
