@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient(name = "study-springcloud-provider")
 public interface TimeoutService {
 
-    @PostMapping("/await")
+    @PostMapping("/timeout")
     String await(@RequestParam("timeout") Long timeout);
 }
