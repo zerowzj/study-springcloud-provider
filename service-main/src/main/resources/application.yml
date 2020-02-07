@@ -19,7 +19,7 @@ eureka:
     #服务实例所在主机名
     hostname: study-springcloud-provider
     #服务实例的IP地址，默认null
-    ip-address: 114.67.102.8
+    #ip-address: 114.67.102.8
     #服务实例在注册中心的唯一实例id
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
     #是否优先使用服务实例的IP地址，相较于hostname
