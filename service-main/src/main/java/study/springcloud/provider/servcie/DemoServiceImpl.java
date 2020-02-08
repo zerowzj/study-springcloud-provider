@@ -1,11 +1,14 @@
 package study.springcloud.provider.servcie;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.env.Environment;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import study.springcloud.provider.DemoService;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.concurrent.TimeUnit;
 
 @Slf4j
@@ -27,5 +30,11 @@ public class DemoServiceImpl implements DemoService {
     public String sayHi(String name) {
         log.info("SFFFFFFFFFFFFFFF");
         return "hello, " + name;
+    }
+
+    @PostMapping("/exception")
+    public void getNextServer(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        log.info("excpetion=================");
+        throw new RuntimeException("异常测试");
     }
 }
