@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import study.springcloud.provider.DemoService;
 
@@ -32,8 +33,8 @@ public class DemoServiceImpl implements DemoService {
         return "hello, " + name;
     }
 
-    @PostMapping("/exception")
-    public void exception(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    @RequestMapping("/exception")
+    public void exception(HttpServletRequest request, HttpServletResponse response) {
         log.info("======> exception");
         throw new RuntimeException("异常测试");
     }
