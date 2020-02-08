@@ -17,7 +17,7 @@ public class DemoServiceImpl implements DemoService {
 
     @Override
     public String await() {
-        log.info("超时测试......");
+        log.info("======> await");
         try {
             TimeUnit.HOURS.sleep(1);
         } catch (Exception ex) {
@@ -28,13 +28,13 @@ public class DemoServiceImpl implements DemoService {
 
     @Override
     public String sayHi(String name) {
-        log.info("SFFFFFFFFFFFFFFF");
+        log.info("======> sayHi");
         return "hello, " + name;
     }
 
     @PostMapping("/exception")
-    public void getNextServer(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        log.info("excpetion=================");
+    public void exception(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        log.info("======> exception");
         throw new RuntimeException("异常测试");
     }
 }
