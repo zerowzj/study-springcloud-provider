@@ -12,5 +12,5 @@ spring:
     web-application-type: servlet
     banner-mode: 'off'
   profiles:
-    active: eureka
-#    active: nacos
+#    active: eureka
+    active: nacos
