@@ -16,7 +16,7 @@ public class GlobalExceptionHandler {
         log.info("provider 异常了");
         ex.printStackTrace();
         Map<String, Object> result = new HashMap<>();
-        result.put("code", "9999");
+        result.put("code", "8989");
         result.put("desc", ex.getMessage());
         return result;
     }
