@@ -7,3 +7,12 @@ spring:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
+        #
+        #namespace: study-springcloud-provider
+        #服务名
+        service: ${spring.application.name}
+        #心跳
+        heart-beat-interval: 5
+        heart-beat-timeout: 5
+        #
+        watch-delay: 30000
