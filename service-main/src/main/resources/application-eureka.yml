@@ -25,6 +25,7 @@ eureka:
     fetch-registry: true
     #从 server 获取注册表信息的频率，默认30秒
     registry-fetch-interval-seconds: 30
+    #（▲）连接
     #连接 server 超时时间，默认5秒
     eureka-server-connect-timeout-seconds: 5
     #读取 server 超时时间，默认8秒
