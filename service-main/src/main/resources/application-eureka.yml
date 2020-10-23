@@ -12,24 +12,27 @@ eureka:
     prefer-ip-address: true
     #（▲）续约
     #向 server 发送心跳间隔，默认30秒
+    #向服务端发送一次心跳，证明自己依然“存活”
     lease-renewal-interval-in-seconds: 30
     #指示 server 在删除此实例之前收到最后一次心跳之后等待的时间，默认90秒
-    lease-expiration-duration-in-seconds: 90
+    #告诉服务端，如果我90s之内没有给你发心跳，就代表我“死”了，将我踢出掉。
+    lease-expiration-duration-in-seconds: 10
   #（★）客户端配置
   client:
+    #
+    service-url:
+      defaultZone: @eureka.server.list@
+    #（▲）服务发现及注册！！！
     #是否启用 client，默认true
     enabled: true
-    #是否应将 client 注册到 server 以供其他服务发现，默认为false
+    #是否应将 client 注册到 server 以供其他服务发现，默认为true
     register-with-eureka: true
     # client 是否获取 server 上的注册信息，默认为true
     fetch-registry: true
-    #从 server 获取注册表信息的频率，默认30秒
+    #从 server 获取注册表信息间隔，默认30秒
     registry-fetch-interval-seconds: 30
     #（▲）连接
     #连接 server 超时时间，默认5秒
     eureka-server-connect-timeout-seconds: 5
     #读取 server 超时时间，默认8秒
     eureka-server-read-timeout-seconds: 8
-    #
-    service-url:
-      defaultZone: @eureka.server.list@
