@@ -21,7 +21,7 @@ eureka:
     enabled: true
     #是否应将 client 注册到 server 以供其他服务发现，默认为false
     register-with-eureka: true
-    # client是否获取 server 上的注册信息，默认为true
+    # client 是否获取 server 上的注册信息，默认为true
     fetch-registry: true
     #从 server 获取注册表信息的频率，默认30秒
     registry-fetch-interval-seconds: 30
