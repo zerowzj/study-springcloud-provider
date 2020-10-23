@@ -1,8 +1,6 @@
-###############################
-#（★）Eureka Client
-###############################
+#
 eureka:
-  #（▲）实例配置
+  #（★）实例配置
   instance:
     #服务实例所在主机名
     hostname: study-springcloud-provider
@@ -12,26 +10,24 @@ eureka:
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
     #是否优先使用服务实例的IP地址，相较于hostname
     prefer-ip-address: true
-    #--------------------
-    #续约
-    #--------------------
-    #向Server发送心跳间隔，默认30秒
+    #（▲）续约
+    #向 server 发送心跳间隔，默认30秒
     lease-renewal-interval-in-seconds: 30
-    #指示Server在删除此实例之前收到最后一次心跳之后等待的时间，默认90秒
+    #指示 server 在删除此实例之前收到最后一次心跳之后等待的时间，默认90秒
     lease-expiration-duration-in-seconds: 90
-  #（▲）客户端配置
+  #（★）客户端配置
   client:
-    #是否启用Client，默认true
+    #是否启用 client，默认true
     enabled: true
-    #是否应将Client注册到Server以供其他服务发现，默认为false
+    #是否应将 client 注册到 server 以供其他服务发现，默认为false
     register-with-eureka: true
-    #Client是否获取Server上的注册信息，默认为true
+    # client是否获取 server 上的注册信息，默认为true
     fetch-registry: true
-    #从Server获取注册表信息的频率，默认30秒
+    #从 server 获取注册表信息的频率，默认30秒
     registry-fetch-interval-seconds: 30
-    #连接Server超时时间，默认5秒
+    #连接 server 超时时间，默认5秒
     eureka-server-connect-timeout-seconds: 5
-    #读取Server超时时间，默认8秒
+    #读取 server 超时时间，默认8秒
     eureka-server-read-timeout-seconds: 8
     #
     service-url:
