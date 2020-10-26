@@ -10,11 +10,13 @@ public class GreetingServiceImpl  implements GreetingService {
 
     @Override
     public String sayHi() {
-        return null;
+        log.info(">>>>>> hi");
+        return "hello";
     }
 
     @Override
     public String sayBye() {
-        return null;
+        log.info(">>>>>> hi");
+        return "bye bye";
     }
 }

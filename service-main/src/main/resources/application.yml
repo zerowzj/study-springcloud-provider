@@ -3,7 +3,7 @@ server:
   port: 7300
 #
 logging:
-  config: classpath:logback.xml
+  config: classpath:logback-spring.xml
 #
 spring:
   application:
@@ -12,5 +12,5 @@ spring:
     web-application-type: servlet
     banner-mode: 'off'
   profiles:
-    active: eureka
+    active: eureka, @env@
 #    active: nacos
