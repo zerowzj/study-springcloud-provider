@@ -13,4 +13,4 @@ spring:
     banner-mode: 'off'
   profiles:
     active: eureka, @env@
-#    active: nacos
+#    active: nacos, @env@
