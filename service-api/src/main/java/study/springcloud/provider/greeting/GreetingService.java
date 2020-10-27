@@ -12,5 +12,4 @@ public interface GreetingService {
 
     @PostMapping("/sayBye")
     String sayBye();
-
 }
