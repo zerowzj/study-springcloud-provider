@@ -6,7 +6,7 @@ import study.springcloud.provider.greeting.GreetingService;
 
 @Slf4j
 @RestController
-public class GreetingServiceImpl  implements GreetingService {
+public class GreetingServiceImpl implements GreetingService {
 
     @Override
     public String sayHi() {
