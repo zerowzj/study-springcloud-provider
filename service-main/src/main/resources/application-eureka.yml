@@ -1,6 +1,6 @@
 #
 eureka:
-  #（★）实例配置
+  #实例配置
   instance:
     #服务实例所在主机名
     hostname: study-springcloud-provider
@@ -11,19 +11,19 @@ eureka:
     #是否优先使用服务实例的IP地址，相较于hostname
     #是否优先使用服务实例ip代替hostname作为实例hostName
     prefer-ip-address: true
-    #（▲）续约
+    #（★）续约！！！
     #向 server 发送心跳间隔，默认30秒
     #向服务端发送一次心跳，证明自己依然“存活”
     lease-renewal-interval-in-seconds: 30
     #指示 server 在删除此实例之前收到最后一次心跳之后等待的时间，默认90秒
     #告诉服务端，如果我90s之内没有给你发心跳，就代表我“死”了，将我踢出掉。
-    lease-expiration-duration-in-seconds: 10
-  #（★）客户端配置
+    lease-expiration-duration-in-seconds: 90
+  #客户端配置
   client:
     #server 通信zone和url地址
     service-url:
       defaultZone: @eureka.server.list@
-    #（▲）服务发现及注册！！！
+    #（★）服务注册及发现！！！
     #是否启用 client，默认true
     enabled: true
     #是否应将 client 注册到 server，默认为true
@@ -34,7 +34,7 @@ eureka:
     registry-fetch-interval-seconds: 30
     #（▲）心跳
     #心跳执行器线程池大小，默认2
-    heartbeat-executor-thread-pool-size: 2
+    heartbeat-executor-thread-pool-size: 1
     #心跳超时重试延迟时间的最大乘数值，默认10
     #leaseRenewalIntervalInSeconds * heartbeatExecutorExponentialBackOffBound
     heartbeat-executor-exponential-back-off-bound: 10

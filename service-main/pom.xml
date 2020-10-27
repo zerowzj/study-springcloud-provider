@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>study.springcloud</groupId>
-    <artifactId>service-main</artifactId>
+    <artifactId>study-springcloud-provider</artifactId>
     <version>1.0</version>
 
     <properties>
@@ -66,7 +66,6 @@
     </dependencies>
 
     <build>
-        <finalName>study-springcloud-provider</finalName>
         <filters>
             <filter>src/main/filters/${env}.properties</filter>
         </filters>
@@ -80,6 +79,33 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <descriptors>
+                        <descriptor>src/main/assembly/assembly.xml</descriptor>
+                    </descriptors>
+                    <appendAssemblyId>false</appendAssemblyId>
+                    <skipAssembly>false</skipAssembly>
+                    <!--  -->
+                    <workDirectory>ABC</workDirectory>
+                    <!--  -->
+                    <basedir></basedir>
+                    <!-- 输出目录 -->
+                    <outputDirectory>target/dist</outputDirectory>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
@@ -99,6 +125,24 @@
             <properties>
                 <env>dev</env>
             </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>wagon-maven-plugin</artifactId>
+                        <version>2.0.0</version>
+                        <configuration>
+                            <url><![CDATA[scp://wzhj:wzj!#135@150.158.110.15/xdfapp]]></url>
+                            <fromDir>target/dist</fromDir>
+                            <displayCommandOutputs>true</displayCommandOutputs>
+                            <commands>
+                                <command>cd /xdfapp/${project.artifactId}-${project.version}</command>
+                                <command>sh /xdfapp/${project.artifactId}-${project.version}/server.sh restart</command>
+                            </commands>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
         </profile>
         <profile>
             <id>docker</id>
