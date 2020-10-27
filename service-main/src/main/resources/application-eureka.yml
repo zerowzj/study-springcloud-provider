@@ -6,6 +6,7 @@ eureka:
     #ip-address: 114.67.102.8
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
     prefer-ip-address: true
+
     #（★）续约！！！
     #向 server 发送心跳间隔，默认30秒
     #向服务端发送一次心跳，证明自己依然“存活”
@@ -15,9 +16,10 @@ eureka:
     lease-expiration-duration-in-seconds: 90
   #客户端配置
   client:
-    #server 通信zone和url地址
+    #（★）server 通信zone和url地址
     service-url:
       defaultZone: @eureka.server.list@
+
     #（★）服务注册及发现！！！
     #是否启用 client，默认true
     enabled: true
@@ -27,12 +29,14 @@ eureka:
     fetch-registry: false
     #从 server 获取注册表信息间隔，默认30秒
     registry-fetch-interval-seconds: 30
-    #（▲）心跳
+
+    #（★）心跳！！！
     #心跳执行器线程池大小，默认2
     heartbeat-executor-thread-pool-size: 1
     #心跳超时重试延迟时间的最大乘数值，默认10
     #leaseRenewalIntervalInSeconds * heartbeatExecutorExponentialBackOffBound
     heartbeat-executor-exponential-back-off-bound: 10
+
     #（▲）缓存
     #是否禁用增量获取
     disable-delta: true
