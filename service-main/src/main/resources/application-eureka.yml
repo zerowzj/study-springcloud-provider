@@ -4,8 +4,8 @@ eureka:
   instance:
     hostname: study-springcloud-provider
     ip-address: 150.158.110.15
-    instance-id: ${spring.cloud.client.ip-address}:${server.port}
     prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
 
     #（★）续约！！！
     #向 server 发送心跳间隔，默认30秒
