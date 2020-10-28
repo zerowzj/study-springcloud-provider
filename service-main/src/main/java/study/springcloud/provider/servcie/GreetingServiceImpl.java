@@ -1,4 +1,4 @@
-package study.springcloud.provider;
+package study.springcloud.provider.servcie;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RestController;
