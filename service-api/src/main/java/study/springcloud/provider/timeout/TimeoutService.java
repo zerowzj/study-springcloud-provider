@@ -8,5 +8,5 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface TimeoutService {
 
     @PostMapping("/timeout")
-    String await(@RequestParam("timeout") Long timeout);
+    String timeout(@RequestParam("timeout") Long timeout);
 }

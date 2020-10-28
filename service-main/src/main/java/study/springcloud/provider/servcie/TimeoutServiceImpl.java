@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 public class TimeoutServiceImpl implements TimeoutService {
 
     @Override
-    public String await(Long timeout) {
+    public String timeout(Long timeout) {
         log.info("receive the request: {} s", timeout);
         long start = System.currentTimeMillis();
         try {
