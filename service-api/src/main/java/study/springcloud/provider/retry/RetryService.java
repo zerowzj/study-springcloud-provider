@@ -1,14 +1,12 @@
 package study.springcloud.provider.retry;
 
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import javax.servlet.http.HttpServletResponse;
 
 @FeignClient(name = "study-springcloud-provider")
 public interface RetryService {
 
-    @PostMapping("/retry")
+    @RequestMapping("/retry")
     void retry(@RequestParam("code") int code);
 }
