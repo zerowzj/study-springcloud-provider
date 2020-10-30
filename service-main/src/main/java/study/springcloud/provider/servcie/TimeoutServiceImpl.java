@@ -12,14 +12,12 @@ public class TimeoutServiceImpl implements TimeoutService {
 
     @Override
     public String timeout(Long timeout) {
-        log.info("receive the request: {} s", timeout);
-        long start = System.currentTimeMillis();
+        log.info(">>>>>> timeout= {}", timeout);
         try {
             TimeUnit.SECONDS.sleep(timeout);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-        log.info("cost time: {}", System.currentTimeMillis() - start);
         return "success";
     }
 }

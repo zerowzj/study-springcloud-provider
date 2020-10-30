@@ -11,6 +11,7 @@ public class RetryServiceImpl implements RetryService {
 
     @Override
     public void retry(int code) {
+        log.info(">>>>>> code= {}", code);
         try {
             HttpServlets.getResponse().sendError(code);
         } catch (Exception ex) {
