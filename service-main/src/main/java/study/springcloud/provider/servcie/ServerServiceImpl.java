@@ -5,13 +5,13 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.RestController;
-import study.springcloud.provider.loadbalance.LoadBalanceService;
+import study.springcloud.provider.server.ServerService;
 
 import java.util.Map;
 
 @Slf4j
 @RestController
-public class LoadBalanceServiceImpl implements LoadBalanceService {
+public class ServerServiceImpl implements ServerService {
 
     @Autowired
     private Environment env;

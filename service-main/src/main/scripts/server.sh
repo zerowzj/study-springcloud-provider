@@ -12,7 +12,7 @@ DEPLOY_DIR=$(pwd)
 #日志目录
 LOG_DIR=/xdfapp/logs/$PROJECT_NAME
 #标准输出
-STDOUT_LOG=$DEPLOY_DIR/stdout.date+%Y-%m-%d.log
+STDOUT_LOG=$DEPLOY_DIR/stdout.log
 # GC日志
 GC_LOG=$DEPLOY_DIR/gc.log
 
