@@ -20,7 +20,7 @@ GC_LOG=$DEPLOY_DIR/gc.log
 source /etc/profile
 
 #启动参数
-JAVA_MEM_OPTS=" -server -Xms1g -Xmx1g -Xmn256m -Xss256k"
+JAVA_MEM_OPTS=" -server -Xms128m -Xmx128m -Xmn128m -Xss256k"
 JAVA_GC_OPTS=" -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+PrintClassHistogram -XX:-TraceClassUnloading -verbose:gc -Xloggc:"$GC_LOG_FILE
 JAVA_OPTS=$JAVA_MEM_OPTS
 
