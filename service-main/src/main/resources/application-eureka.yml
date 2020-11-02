@@ -5,8 +5,8 @@ eureka:
     hostname: study-springcloud-provider
 #    ip-address: 150.158.110.15
     ip-address: 111.229.94.31
-    prefer-ip-address: true
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    prefer-ip-address: true
     #（★）续约！！！
     #向 server 发送心跳间隔，默认30秒
     #向服务端发送一次心跳，证明自己依然“存活”
@@ -16,7 +16,6 @@ eureka:
     lease-expiration-duration-in-seconds: 90
   #客户端配置
   client:
-    #（★）server 通信zone和url地址
     service-url:
       defaultZone: @eureka.server.list@
     #（★）服务注册及发现！！！
@@ -35,7 +34,7 @@ eureka:
     #leaseRenewalIntervalInSeconds * heartbeatExecutorExponentialBackOffBound
     heartbeat-executor-exponential-back-off-bound: 10
 
-    #（▲）缓存
+    #（）缓存
     #是否禁用增量获取
     disable-delta: true
     #缓存刷新执行器线程池大小
@@ -43,7 +42,7 @@ eureka:
     #缓存刷新超时重试延迟时间的最大乘数值，默认10
     #registryFetchIntervalSeconds * cacheRefreshExecutorExponentialBackOffBound
     cache-refresh-executor-exponential-back-off-bound: 10
-    #（▲）连接
+    #（）连接
     #连接 server 超时时间，默认5秒
     eureka-server-connect-timeout-seconds: 5
     #读取 server 超时时间，默认8秒

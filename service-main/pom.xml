@@ -48,14 +48,13 @@
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
         <!-- Nacos -->
-<!--        <dependency>-->
-<!--            <groupId>com.alibaba.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>-->
-<!--            <version>2.1.0.RELEASE</version>-->
-<!--        </dependency>-->
-        <!-- ============================== -->
-        <!-- （★）            -->
-        <!-- ============================== -->
+        <!--        <dependency>-->
+        <!--            <groupId>com.alibaba.cloud</groupId>-->
+        <!--            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>-->
+        <!--            <version>2.1.0.RELEASE</version>-->
+        <!--        </dependency>-->
+
+        <!-- API -->
         <dependency>
             <groupId>study.springcloud</groupId>
             <artifactId>service-api</artifactId>
