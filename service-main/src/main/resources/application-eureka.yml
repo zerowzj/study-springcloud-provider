@@ -53,7 +53,7 @@ eureka:
     eureka-server-total-connections: 200
     #每个主机的总连接数，client 连接 server的单机连接数量，默认50
     eureka-server-total-connections-per-host: 50
-    #询问eureka服务url信息变化的频率，默认为300秒
+    #询问 eureka 服务url信息变化的频率，默认为300秒
     eureka-service-url-poll-interval-seconds: 300
     #间隔多长时间再次复制实例信息到server，默认为30秒
-    eureka.client.instance-info-replication-interval-seconds: 30
+    instance-info-replication-interval-seconds: 30
