@@ -3,8 +3,8 @@ eureka:
   #实例配置
   instance:
     hostname: study-springcloud-provider
-#    ip-address: 150.158.110.15
-    ip-address: 111.229.94.31
+    ip-address: 150.158.110.15
+#    ip-address: 111.229.94.31
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
     prefer-ip-address: true
     #（★）续约！！！
