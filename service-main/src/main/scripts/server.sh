@@ -9,12 +9,11 @@ PROJECT_NAME=study-springcloud-provider
 JAR_FILE=study-springcloud-provider-1.0.jar
 #部署目录
 DEPLOY_DIR=$(pwd)
-#日志目录
-LOG_DIR=/xdfapp/logs/$PROJECT_NAME
+
 #标准输出
-STDOUT_LOG=$DEPLOY_DIR/stdout.log
+STDOUT_LOG=/xdfapp/logs/$PROJECT_NAME/stdout.log
 # GC日志
-GC_LOG=$DEPLOY_DIR/gc.log
+GC_LOG=/xdfapp/logs/$PROJECT_NAME/gc.log
 
 #环境变量
 source /etc/profile
