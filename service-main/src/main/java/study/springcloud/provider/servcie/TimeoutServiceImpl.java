@@ -16,7 +16,7 @@ public class TimeoutServiceImpl implements TimeoutService {
         try {
             TimeUnit.SECONDS.sleep(timeout);
         } catch (Exception ex) {
-            ex.printStackTrace();
+            throw new RuntimeException("", ex);
         }
         return "success";
     }
