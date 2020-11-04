@@ -10,7 +10,7 @@ spring:
     name: study-springcloud-provider
   main:
     web-application-type: servlet
-    banner-mode: 'off'
+    banner-mode: off
   profiles:
     active: eureka, @env@
 #    active: nacos, @env@
