@@ -20,4 +20,14 @@ public class TimeoutServiceImpl implements TimeoutService {
         }
         return "success";
     }
+
+    @Override
+    public String timeoutByGet(Long timeout) {
+        return timeout(timeout);
+    }
+
+    @Override
+    public String timeoutByPost(Long timeout) {
+        return timeout(timeout);
+    }
 }
