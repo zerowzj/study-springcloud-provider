@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 public class TimeoutServiceImpl implements TimeoutService {
 
     @Override
-    public String timeout(Long timeout) {
+    public String timeoutByGet(Long timeout) {
         log.info(">>>>>> timeout= {}", timeout);
         try {
             TimeUnit.SECONDS.sleep(timeout);
@@ -22,12 +22,7 @@ public class TimeoutServiceImpl implements TimeoutService {
     }
 
     @Override
-    public String timeoutByGet(Long timeout) {
-        return timeout(timeout);
-    }
-
-    @Override
     public String timeoutByPost(Long timeout) {
-        return timeout(timeout);
+        return timeoutByGet(timeout);
     }
 }

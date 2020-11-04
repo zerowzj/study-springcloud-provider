@@ -10,7 +10,7 @@ import study.springcloud.provider.support.utils.HttpServlets;
 public class RetryServiceImpl implements RetryService {
 
     @Override
-    public void retry(int code) {
+    public void retryByGet(int code) {
         log.info(">>>>>> code= {}", code);
         try {
             HttpServlets.getResponse().sendError(code);
@@ -20,12 +20,7 @@ public class RetryServiceImpl implements RetryService {
     }
 
     @Override
-    public void retryByGet(int code) {
-        retry(code);
-    }
-
-    @Override
     public void retryByPost(int code) {
-        retry(code);
+        retryByGet(code);
     }
 }
