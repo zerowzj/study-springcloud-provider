@@ -18,4 +18,14 @@ public class RetryServiceImpl implements RetryService {
             ex.printStackTrace();
         }
     }
+
+    @Override
+    public void retryByGet(int code) {
+        retry(code);
+    }
+
+    @Override
+    public void retryByPost(int code) {
+        retry(code);
+    }
 }
