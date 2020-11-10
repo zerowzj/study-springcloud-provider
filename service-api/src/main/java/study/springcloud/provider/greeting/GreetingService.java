@@ -8,4 +8,7 @@ public interface GreetingService {
 
     @RequestMapping("/sayHi")
     String sayHi();
+
+    @RequestMapping("/sayBye")
+    String sayBye();
 }
