@@ -91,7 +91,8 @@
                     </descriptors>
                     <appendAssemblyId>false</appendAssemblyId>
                     <skipAssembly>false</skipAssembly>
-                    <outputDirectory>target/dist</outputDirectory>
+                    <!-- 打包文件输出目录 -->
+                    <outputDirectory></outputDirectory>
                 </configuration>
                 <executions>
                     <execution>
@@ -130,11 +131,12 @@
                         <configuration>
                             <url><![CDATA[scp://wzhj:wzj!#135@150.158.110.15/xdfapp]]></url>
 <!--                            <url><![CDATA[scp://wzhj:wzj!#135@111.229.94.31/xdfapp]]></url>-->
-                            <fromDir>target/dist</fromDir>
+                            <fromFile>target/${project.artifactId}-${project.version}.tar.gz</fromFile>
                             <displayCommandOutputs>true</displayCommandOutputs>
                             <commands>
-                                <command>cd /xdfapp/${project.artifactId}-${project.version}</command>
-                                <command>sh /xdfapp/${project.artifactId}-${project.version}/server.sh restart</command>
+                                <command>cd /xdfapp</command>
+                                <command>tar -zxvf ${project.artifactId}-${project.version}.tar.gz</command>
+                                <command>sh /xdfapp/${project.artifactId}/server.sh restart</command>
                             </commands>
                         </configuration>
                     </plugin>

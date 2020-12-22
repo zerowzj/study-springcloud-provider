@@ -4,12 +4,15 @@
           http://maven.apache.org/xsd/assembly-2.6.xsd">
     <!--（★）基本信息 -->
     <id>${project.artifactId}-assembly-${project.version}</id>
-    <!-- 基本目录 -->
+    <!-- 是否包括基本目录 -->
     <includeBaseDirectory>true</includeBaseDirectory>
-    <baseDirectory></baseDirectory>
+    <!-- 基本目录 -->
+    <baseDirectory>study-springcloud-provider</baseDirectory>
+    <!-- 打包文件格式 -->
     <formats>
-        <format>dir</format>
+        <format>tar.gz</format>
     </formats>
+
     <!--（★）文件集 -->
     <fileSets>
         <fileSet>
@@ -22,6 +25,7 @@
             <fileMode>0755</fileMode>
         </fileSet>
     </fileSets>
+
     <!--（★）文件 -->
     <files>
         <file>
