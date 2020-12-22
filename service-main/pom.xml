@@ -118,9 +118,9 @@
             </activation>
         </profile>
         <profile>
-            <id>dev</id>
+            <id>ecs</id>
             <properties>
-                <env>dev</env>
+                <env>ecs</env>
             </properties>
             <build>
                 <plugins>
@@ -134,8 +134,8 @@
                             <fromFile>target/${project.artifactId}-${project.version}.tar.gz</fromFile>
                             <displayCommandOutputs>true</displayCommandOutputs>
                             <commands>
-                                <command>cd /xdfapp</command>
-                                <command>tar -zxvf ${project.artifactId}-${project.version}.tar.gz</command>
+                                <command>tar -zxvf /xdfapp/${project.artifactId}-${project.version}.tar.gz</command>
+                                <command>sleep 2</command>
                                 <command>sh /xdfapp/${project.artifactId}/server.sh restart</command>
                             </commands>
                         </configuration>
