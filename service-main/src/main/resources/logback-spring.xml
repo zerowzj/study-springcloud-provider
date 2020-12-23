@@ -22,6 +22,7 @@
     <springProfile name="local">
         <root level="INFO">
             <appender-ref ref="STDOUT"/>
+            <appender-ref ref="FILE"/>
         </root>
     </springProfile>
     <springProfile name="ecs,docker">
