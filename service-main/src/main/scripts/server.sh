@@ -11,7 +11,7 @@ JAR_FILE=study-springcloud-provider-1.0.jar
 DEPLOY_DIR=$(pwd)
 
 #标准输出
-STDOUT_LOG=/xdfapp/logs/$PROJECT_NAME/stdout.log
+STDOUT_LOG=stdout.log
 # GC日志
 GC_LOG=/xdfapp/logs/$PROJECT_NAME/gc.log
 
